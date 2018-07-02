@@ -1,0 +1,20 @@
+{% extends "diht/base.html" %}
+
+
+{% block 'headTitle' %} {{ article.title }} {% endblock %}
+
+{% block 'title' %} {{ article.title }} {% endblock %}
+
+{% block 'content' %}
+
+    <p> {{ article.date }} </p>
+
+    {% if article.img %}
+        <img src = "{{ article.img.url }}" />
+    {% endif %}
+
+    {% if article.text %}
+        {{ article.text }}
+    {% endif %}
+
+{% endblock %}
